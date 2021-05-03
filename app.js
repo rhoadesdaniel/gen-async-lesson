@@ -105,3 +105,5 @@ document
 document
   .querySelector('span:nth-child(2)')
   .addEventListener('click', deleteAPost);
+
+// Bonus use Async / Await to handle Promises and chaining where possible
