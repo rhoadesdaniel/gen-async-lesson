@@ -1,92 +1,54 @@
 const start = async () => {
   // run the class api getPosts method and handle the pending Promise
+  //
   // if successful log the data, a text string `-----------------`
   // loop thru each array value and run the defined printPostRow
   // passing in each post to the method
   //  log another text string `-----------------`
+  //
   // last catch an error if the promise is rejected and log it
-  api
-    .getPosts()
-    .then((currentPosts) => {
-      console.log(currentPosts);
-      console.log(`-----------------`);
-      currentPosts.forEach((post) => {
-        printPostRow(post);
-      });
-      console.log(`-----------------`);
-    })
-    .catch((err) => {
-      document.write(err);
-    });
 };
 
 const addANewPost = () => {
-  // run the class api addPost method and handle the pending Promise
-  // pass in the object value
-  // {
-  //   owner: {
-  //     firstName: firstInput,
-  //     lastName: lastInput,
-  //   },
-  //   text: postInput,
-  // }
-  // run the getPosts method again to retrieve a new snapshot with the new post
-  // if successful log a text string `-----------------`
-  // loop thru each array value and run the defined printPostRow
-  // passing in each post to the method
-  //  log another text string `-----------------`
-  // last catch an error if the promise is rejected and log it
   const firstInput = prompt('What is your first name?').trim();
   const lastInput = prompt('What is your last name?').trim();
   const postInput = prompt('What would you like to post?').trim();
   if (firstInput && lastInput && postInput) {
-    api
-      .addPost({
-        owner: {
-          firstName: firstInput,
-          lastName: lastInput,
-        },
-        text: postInput,
-      })
-      .then(() => {
-        api.getPosts().then((currentPosts) => {
-          console.log(`-----------------`);
-          currentPosts.forEach((post) => {
-            printPostRow(post);
-          });
-          console.log(`-----------------`);
-        });
-      })
-      .catch((err) => {
-        document.write(err);
-      });
+    // run the class api addPost method
+    // pass in the object argument value
+    // {
+    //   owner: {
+    //     firstName: firstInput,
+    //     lastName: lastInput,
+    //   },
+    //   text: postInput,
+    // }
+    //
+    // and handle the pending Promise by
+    // run the getPosts method again to retrieve a new snapshot with the new post added
+    //
+    // if successful log a text string `-----------------`
+    // loop thru each array value and run the defined printPostRow
+    // passing in each post to the method
+    //  log another text string `-----------------`
+    //
+    // last catch an error if either promise is rejected and log it
   }
 };
 
 const deleteAPost = () => {
-  // run the class api deletePost method and handle the pending Promise
+  // run the class api deletePost method and
+  //
+  // handle the pending Promise
+  //
   // in the successful callback run or invoke the getPosts method again
   // to gain a new snapshot of the posts data and
   // if successful log a text string `-----------------`
   // loop thru each array value and run the defined printPostRow
   // passing in each post to the method
   //  log another text string `-----------------`
+  //
   // last catch an error if the promise is rejected and log it
-  api
-    .deletePost()
-    .then((removedPost) => {
-      console.log(removedPost);
-      api.getPosts().then((currentPosts) => {
-        console.log(`-----------------`);
-        currentPosts.forEach((post) => {
-          printPostRow(post);
-        });
-        console.log(`-----------------`);
-      });
-    })
-    .catch((err) => {
-      document.write(err);
-    });
 };
 
 // a utility function just to print individual posts to the console
