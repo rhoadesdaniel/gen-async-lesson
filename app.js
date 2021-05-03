@@ -94,8 +94,11 @@ const printPostRow = (post) => {
   console.log(`Message: ${post.text}`);
 };
 
+// starting our app
 start();
 
+// dont worry about these statements will go over soon allow our buttons
+// to click and trigger these functions
 document
   .querySelector('span:nth-child(1)')
   .addEventListener('click', addANewPost);
