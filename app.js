@@ -15,13 +15,17 @@ const start = async () => {
 };
 
 const addANewPost = () => {
-  api
+  const firstInput = prompt('What is your first name?').trim();
+  const lastInput = prompt('What is your last name?').trim();
+  const postInput = prompt('What would you like to post?').trim();
+  if(firstInput && lastInput && postInput) {
+    api
     .addPost({
       owner: {
-        firstName: 'Jon',
-        lastName: 'Jackson',
+        firstName: firstInput,
+        lastName: lastInput,
       },
-      text: 'My Siberian Husky',
+      text: postInput,
     })
     .then(() => {
       api.getPosts().then((currentPosts) => {
@@ -32,6 +36,7 @@ const addANewPost = () => {
         console.log(`-----------------`)
       });
     });
+  }
 };
 
 const deleteAPost = () => {
