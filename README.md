@@ -22,7 +22,7 @@ A lesson on Callbacks, Promises, Async Await, Fetch
   
   add the new post data to the posts property array
 
-- deletedPost
+- deletePost
 
    resolve the Promise with the deletedPost if successful
    by checking the condition (deletedPost) to check if its not null
