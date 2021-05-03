@@ -65,6 +65,8 @@ class API {
       console.log('Last Post was deleted!');
       setTimeout(() => {
         // resolve the Promise with the deletedPost if successful
+        // by checking the condition (deletedPost) to check if its not null
+        // or undefined falsy value
         // reject with an error if there is one
         deletedPost
           ? resolve(deletedPost)
