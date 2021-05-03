@@ -89,6 +89,7 @@ const deleteAPost = () => {
     });
 };
 
+// a utility function just to print individual posts to the console
 const printPostRow = (post) => {
   console.log(`Left By: ${post.owner.firstName} ${post.owner.lastName}`);
   console.log(`Message: ${post.text}`);
