@@ -3,8 +3,8 @@ A lesson on Callbacks, Promises, Async Await, Fetch
 
 [Google Slides](https://docs.google.com/presentation/d/1KdKFBntJypRml36RHKzgr6-77YS5rh9wR229eErNW5A/edit#slide=id.p1)
 
-
 [Review 1](https://docs.google.com/document/d/1Clq7qX5FF2fm25ZsD31glVYwfMWf8u-AqyylnU6eKNo/edit)
+
 [Review 2](https://docs.google.com/document/d/1L8n5f8Hs36hDK0U0-Hr1oiHaKKZ8cSH3Upepz3zmIiI/edit)
 
 -   getInitialPosts 
