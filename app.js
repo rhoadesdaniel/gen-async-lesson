@@ -4,7 +4,7 @@ class API {
     this._url = 'https://dummyapi.io/data/api/post?limit=5'; // post endpoint limit 5
     this._app_id = '608ff65ecfb4e068c46f3038'; // had to signup for an app id key
     this._options = {
-      headers: { 'app-id': this._app_id }, // we have to add the cred to the headers of the req
+      headers: { 'app-id': this._app_id }, //// We have to add the credentials to the headers of the request
     };
     this._posts = []; // db store property for our posts
   }
@@ -25,7 +25,6 @@ class API {
   // https://developers.google.com/web/updates/2015/03/introduction-to-fetch
 
   async getInitialPosts() {
-    
     // code goes here
     
   }
@@ -56,6 +55,7 @@ class API {
 
   deletePost() {
     return new Promise((resolve, reject) => {
+      //This is removing the last post from the post array
       const deletedPost = this._posts.pop();
       console.log('Last Post was deleted!');
       setTimeout(() => {
@@ -93,14 +93,14 @@ const deleteAPost = () => {
 
 };
 
-// a utility function just to print individual posts to the console
+// This is a utility function to print individual posts to the console
 const printPostRow = (post) => {
   console.log(`Left By: ${post.owner.firstName} ${post.owner.lastName}`);
   console.log(`Message: ${post.text}`);
 };
 
-// dont worry about these statements will go over soon allow our buttons
-// to click and trigger these functions
+// Don't worry about the statements below, we will go more into how these work on Monday
+// These trigger the functions when the button is clicked in the HTML
 document
   .querySelector('span:nth-child(1)')
   .addEventListener('click', addANewPost);
