@@ -36,20 +36,20 @@ A lesson on Callbacks, Promises, Async Await, Fetch
   
 
 ### 3. deletePost
-  -Navigate to the `deletePost()` method inside of the `API()` class
-  -Inside this method, check the condition of (deletedPost) - if truthy, resolve the promise with the deletedPost
+  - Navigate to the `deletePost()` method inside of the `API()` class
+  - Inside this method, check the condition of (deletedPost) - if truthy, resolve the promise with the deletedPost
   - Otherwise, reject with an error if there is one
 
 
 ### 4. start
-  -Navigate to the `start()` function within `app.js`
+  - Navigate to the `start()` function within `app.js`
   - Run the `getPosts()` method on the class api, and handle the pending promise
-  -If successful, log the data followed by a string `------------------` to seperate information
-  -Loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
-  -Lastly, catch an error is there is one, and console.log it
+  - If successful, log the data followed by a string `------------------` to seperate information
+  - Loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
+  - Lastly, catch an error is there is one, and console.log it
 
 ### 5. addANewPost
-   -Navigate to the `addANewPost()` function
+  - Navigate to the `addANewPost()` function
   - Run the class api `addPost()` method and pass in the object argument value:
     {
       owner: {
