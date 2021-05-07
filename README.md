@@ -9,7 +9,7 @@ A lesson on Callbacks, Promises, Async Await, Fetch
     * Navigate to Git Bash on your local machine and `cd` to a place you wish to clone this activity to work on it
     * Once where you need to be in bash, run `git clone ` followed by the URL you copied from your forked copy of this github repository
     * Open VSCode, select `File` in the top right, and select `Open Folder` 
-    * Find the folder you cloned named `PracticeWithFunctions` and open it, then begin working in the `app.js` file while using the instructions below.
+    * Find the folder you cloned named `gen-async-lesson` and open it, then begin working in the `app.js` file while using the instructions below.
 
 2. Work together to solve step of this activity, one by one. If you get stuck, don't forget to use your Google-Fu and problem solving skills. TA's will be hopping into each room to check in, message one of us on Slack for specific help.
 
