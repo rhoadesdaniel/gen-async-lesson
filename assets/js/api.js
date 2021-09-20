@@ -1,7 +1,7 @@
 // A class for interacting with our https://dummyapi.io/ data
 class API {
   constructor() {
-    this._url = 'https://dummyapi.io/data/api/post?limit=5'; // post endpoint limit 5
+    this._url = 'https://dummyapi.io/data/v1/post?limit=5'; // post endpoint limit 5
     this._app_id = '6147f7ef54f6a659ea3fb59c'; // had to signup for an app id key
     this._options = {
       headers: { 'app-id': this._app_id }, //// We have to add the credentials to the headers of the request
@@ -27,6 +27,8 @@ class API {
   async getInitialPosts() {
     // code goes here for fetching the initial posts with the url, and options arguments
     // then handle the returned Promise with .then(response=>{}) and .catch(err=>{})
+
+    
   }
 
   getPosts() {

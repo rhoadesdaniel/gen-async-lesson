@@ -27,7 +27,7 @@ A lesson on Callbacks, Promises, Async Await, Fetch
 ### 1. getInitialPosts 
   - Navigate to the getInitialPosts method inside of the `API()` class in `app.js`
   - Make a fetch call within `getInitialPosts()` using the provided URL and options property values as arguments (You can use traditional promise handling with .then() and .catch() or async await)
-  - When the fetch is successful, console.log 'Retrieved Posts from API!', and set the data property of the returned response to the class `_posts` property
+  - When the fetch is successful, console.log 'Retrieved Posts from API!', and set the data property of the returned response (after chaining a return of response.json()) to the class `_posts` property
   - Handle any possible error accordingly, and console.log it
   Hint: Remember that fetch already returns a promise, so you don't have to wrap it in one like the `getPosts()` method shows.
 
@@ -41,7 +41,7 @@ A lesson on Callbacks, Promises, Async Await, Fetch
   - Inside this method, check the condition of (deletedPost) - if truthy, resolve the promise with the deletedPost
   - Otherwise, reject with an error if there is one
 
-
+## app.js
 ### 4. start
   - Navigate to the `start()` function within `app.js`
   - Run the `getPosts()` method on the class api, and handle the pending promise
@@ -49,8 +49,6 @@ A lesson on Callbacks, Promises, Async Await, Fetch
   - Loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
   - Lastly, catch an error is there is one, and console.log it
 
-
-## app.js
 ### 5. addANewPost
   - Navigate to the `addANewPost()` function
   - Run the class api `addPost()` method and pass in the object argument value:

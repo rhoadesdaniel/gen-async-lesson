@@ -1,9 +1,21 @@
 const api = new API();
 
+// This is a utility function to print individual posts to the console
+const printPostRow = (post) => {
+  console.log(`Left By: ${post.owner.firstName} ${post.owner.lastName}`);
+  console.log(`Message: ${post.text}`);
+};
+
 const start = async () => {
   await api.getInitialPosts();
 
-  // code goes here
+  // code goes below to call the api getInitialPosts method then call
+  // api.getPosts() inside the callback of the successful aforementioned
+  // call then if successful log '-----------------', loop thru the resolved
+  // posts results and run printPostRow(post) for each one
+  // log another '-----------------' after the loop and catch any errors
+
+
 
 };
 
@@ -13,23 +25,38 @@ const addANewPost = () => {
   const postInput = prompt('What would you like to post?');
   if (firstInput && lastInput && postInput) {
     
-    // code goes here
+    // code goes below for calling the .addPost() method on our api
+    // instance passing in the following data as an argument:
+    /*  
+      {
+        owner: {
+          firstName: firstInput,
+          lastName: lastInput,
+        },
+        text: postInput,
+      }
+    */
+    // log the newPost, then call
+    // api.getPosts() inside the callback of the successful aforementioned
+    // call then if successful log '-----------------', loop thru the resolved
+    // posts results and run printPostRow(post) for each one
+    // log another '-----------------' after the loop and catch any errors
 
   }
 };
 
 const deleteAPost = () => {
   
-  // code goes here
+  // code goes below to call the api delettePost method then call
+  // api.getPosts() inside the callback of the successful aforementioned
+  // call then if successful log '-----------------', loop thru the resolved
+  // posts results and run printPostRow(post) for each one
+  // log another '-----------------' after the loop and catch any errors
+
 
 };
 
-// This is a utility function to print individual posts to the console
-const printPostRow = (post) => {
-  console.log(`Left By: ${post.owner.firstName} ${post.owner.lastName}`);
-  console.log(`Message: ${post.text}`);
-};
-
+// NO NEED TO CHANGE ANYTHING BELOW BUT NO HARM IN GOOGLING SOME OF IT
 // Don't worry about the statements below, we will go more into how these work on Monday
 // These trigger the functions when the button is clicked in the HTML
 document
