@@ -23,6 +23,7 @@ A lesson on Callbacks, Promises, Async Await, Fetch
 
 ## Before proceeding to step 1, please look through ALL of the code in the `app.js` file to be aquainted with the project, and have a grasp of the content before you dive in.
 
+## api.js
 ### 1. getInitialPosts 
   - Navigate to the getInitialPosts method inside of the `API()` class in `app.js`
   - Make a fetch call within `getInitialPosts()` using the provided URL and options property values as arguments (You can use traditional promise handling with .then() and .catch() or async await)
@@ -48,27 +49,30 @@ A lesson on Callbacks, Promises, Async Await, Fetch
   - Loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
   - Lastly, catch an error is there is one, and console.log it
 
+
+## app.js
 ### 5. addANewPost
   - Navigate to the `addANewPost()` function
   - Run the class api `addPost()` method and pass in the object argument value:
     {
       owner: {
-        firstName: firstInput,
-        lastName: lastInput,
+        firstName: firstInput.trim(),
+        lastName: lastInput.trim(),
       },
-      text: postInput,
+      text: postInput.trim(),
     }
     
-  - Handle the pending Promise by
-    running the `getPosts()` method again if the promise is fulfilled to retrieve a new snapshot with the new post added
-  - If successful log a text string `-----------------` then loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
+  - Handle the pending Promise by attaching a callback to the above function
+    call's .then() and make sure you provide a parameter so you can console.log()
+    the resolved value.  Then inside the .then() callback call the `getPosts()` method again if the promise is fulfilled to retrieve a new snapshot with the new post added
+    - If successful attach another callback to this .then() with a parameter for the return value called `currentPosts`, log a text string `-----------------` then loop through the `currentPosts` array value and run the defined `printPostRow()` function, passing in each post as an argument, then after the loop log another `-------------` to seperate each post
   - Lastly, catch an error is there is one, and console.log it
 
 ### 6. deleteAPost
   - Navigate to the `deleteAPost()` function
   - Run the class api `deletePost()` method and handle the pending Promise
   - In the successful callback run the `getPosts()` method again to gain a new snapshot of the posts data and
-  - If successful log a text string `-----------------` then loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` still within the loop to seperate each post
+  - If successful log a text string `-----------------` then loop through each array value and run the defined `printPostRow()` function, passing in each post as an argument, and log another `-------------` to seperate each post
   - Lastly, catch an error is there is one, and console.log it
 
 
