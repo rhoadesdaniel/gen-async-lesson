@@ -29,7 +29,7 @@ class API {
     // then handle the returned Promise with .then(response=>response.json()) followed by
     // chaining .then(jsonRes=>{ // put more in here }) and .catch(err=>{})
 
-    
+
   }
 
   getPosts() {
@@ -65,7 +65,7 @@ class API {
       const deletedPost = this._posts.pop();
       console.log('Last Post was deleted!');
       setTimeout(() => {
-        // code goes here if there is a post to delete from
+        // if there is a post to delete from
         // handle the successful Promise with the deletedPost value
         // else reject with a new Error("custom message")
         // constructor value
