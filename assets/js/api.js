@@ -28,6 +28,8 @@ class API {
     // code goes here for fetching the initial posts with the url, and options arguments
     // then handle the returned Promise with .then(response=>response.json()) followed by
     // chaining .then(jsonRes=>{ // put more in here }) and .catch(err=>{})
+
+    
   }
 
   getPosts() {
